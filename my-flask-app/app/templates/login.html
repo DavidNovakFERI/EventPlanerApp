@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Event Planner App</title>
+    <title>Login - Event Planner App</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
     <header>
-        <h1>Welcome to Event Planner App!</h1>
+        <h1>Event Planner App</h1>
         <nav>
             <ul>
+                <li><a href="/">Home</a></li>
                 <li><a href="/login">Login</a></li>
                 <li><a href="/register">Register</a></li>
             </ul>
@@ -18,17 +19,16 @@
     </header>
     <main>
         <section>
-            <h2>About Us</h2>
-            <p>Event Planner App helps you to create and manage your events effortlessly.</p>
-        </section>
-        <section>
-            <h2>Features</h2>
-            <ul>
-                <li>Create events</li>
-                <li>Manage attendees</li>
-                <li>Send invitations</li>
-                <li>Track RSVPs</li>
-            </ul>
+            <h2>Login</h2>
+            <form action="/login" method="post">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <br>
+                <button type="submit">Login</button>
+            </form>
         </section>
     </main>
     <footer>
